@@ -735,11 +735,11 @@ function filtrarPorCategoria(e) {
         if (pelicula.categoria.toLowerCase().includes(e.target.value.toLowerCase())) {
             const a = document.createElement('A');
             if (pelicula.tipo == 'serie') {
-                a.href = '../pages/serie.html';
+                a.href = 'pages/serie.html';
             }
             // a.href = 'pages/pelicula.html';
             if (pelicula.tipo == 'pelicula') {
-                a.href = '../pages/pelicula.html';
+                a.href = 'pages/pelicula.html';
             }
             a.innerHTML = `
             <img src="${pelicula.src}" ${pelicula.alt}>
@@ -790,11 +790,11 @@ function filtrarPorTipo(e) {
         if (pelicula.tipo.toLowerCase().includes(e.target.value.toLowerCase())) {
             const a = document.createElement('A');
             if (pelicula.tipo == 'serie') {
-                a.href = '../pages/serie.html';
+                a.href = 'pages/serie.html';
             }
             // a.href = 'pages/pelicula.html';
             if (pelicula.tipo == 'pelicula') {
-                a.href = '../pages/pelicula.html';
+                a.href = 'pages/pelicula.html';
             }
             a.innerHTML = `
             <img src="${pelicula.src}" ${pelicula.alt}>
