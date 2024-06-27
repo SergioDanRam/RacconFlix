@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <!-- Enlaza Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Enlaza Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,1,200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="../styles/styles-perfil.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Noto+Serif:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&display=swap"
+        rel="stylesheet">
+    <title>RacconFlix - Mi Perfil</title>
+</head>
+
+<body>
+
+    <header>
+        <section class="iniciar-sesion">
+            <div class="contenedor-titulo">
+                <a href="../index.html"><img class="logo" src="../assets/images/mapache7.png" alt=""></a>
+                <div class="login-perfil">
+                    <!-- <a href="../pages/login.html"><img src="../assets/images/logo-iniciar-sesion.svg" alt="#"></a> -->
+                    <a href="../pages/perfil.html"><img src="../assets/images/user-solid.svg" alt="#"></a>
+                </div>
+            </div>
+        </section>
+    </header>
+
+    <main class="contenedor perfil">
+
+        <section class="info-perfil">
+            <div class="foto-perfil" id="foto-perfil">
+                <img src="../assets/images/foto-perfil.png" alt="imagen usuario">
+            </div>
+
+            <form class="formulario" action="#">
+                <fieldset class="mi-perfil fieldset">
+                    <legend>Mi Perfil</legend>
+
+                    <div class="input input-email">
+                        <label for="email">Email</label>
+                        <!-- <input type="email" id="email" disabled> -->
+                        <div class="input-campo">
+                            <input type="email" id="email"disabled>
+                        </div>
+                    </div>
+
+                    <div class="input input-password">
+                        <label for="contraseña">Contraseña</label>
+                        <!-- <input type="password" id="password" disabled> -->
+                        <div class="input-campo">
+                            <input type="password" id="password"  disabled>
+                        </div>
+                    </div>
+
+                    <div class="input input-nuevacontra">
+                        <label for="nuevaclave">Nueva Contraseña</label>
+                        <!-- <input type="password" class="nuevacontrasenia"> -->
+                        <div class="contrasenaCampo">
+                            <div class="input-campo">
+                                <input type="password" class="nuevacontrasenia">
+                            </div>
+                            <div class="error nueva"></div>
+                        </div>
+                    </div>
+
+                    <div class="input input-repetircontra">
+                        <label for="repetirclave">Repetir Contraseña</label>
+                        <!-- <input type="password" name="repetirclave" class="repetircontrasenia"> -->
+                        <div class="contrasenaRepetir">
+                            <div class="input-campo">
+                                <input type="password" name="repetirclave" class="repetircontrasenia">
+                            </div>
+                            <div class="error repetir"></div>
+                        </div>
+                        
+                    </div>
+
+                </fieldset>
+
+                <fieldset class="metodo-pago fieldset">
+                    <legend>Metodo de Pago</legend>
+
+                    <!-- <div class="tarjeta-credito pago">
+                        <input type="radio" name="pago">
+                        <label for="credito">Tarjeta de Credito</label>
+                        <input type="number">
+                    </div> -->
+                    <div class="inputs-tarjeta-credito pago">
+                        <div class="radio-tarjeta">
+                            <input type="radio" name="pago">
+                            <label for="credito">Tarjeta de Credito</label>
+                        </div>
+                        <div class="inputs-tarjeta">
+                            <div class="validar-inputs">
+                                <input type="number" placeholder="Ingrese los 16 digitos" class="numeros-tarjeta">
+                                <input type="number" placeholder="XXX" class="codigo-tarjeta" minlength="3">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="error tarjeta-error"></div>
+
+                    <div class="cupon-pago pago">
+                        <input type="radio" name="pago">
+                        <label for="cupon">Cupón de pago</label>
+                        <div class="checkbox">
+                            <div class="pagofacil">
+                                <input type="checkbox" class="checkbox-pagofacil">
+                                <label for="#">Pago Facil</label>
+                            </div>
+                            <div class="rapipago">
+                                <input type="checkbox" class="checkbox-rapipago">
+                                <label for="#">Rapipago</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- <div class="transferencia-bancaria pago">
+                        <input type="radio" name="pago" min="22">
+                        <label for="tranferencia">Transferencia Bancaria</label>
+                        <input type="number" placeholder="CBU">
+                    </div> -->
+
+                    <div class="transferencia-bancaria pago">
+                        <div class="contenedor-cbu">
+                            <input type="radio" name="pago" min="22">
+                            <label for="tranferencia">Transferencia Bancaria</label>
+                        </div>
+                        <div class="input-cbu">
+                            <input type="number" placeholder="CBU" class="cbu">
+                        </div>
+                    </div>
+
+                </fieldset>
+            </form>
+
+            <div class="botones-formulario">
+                <button class="guardar" disabled>Guardar cambios</button>
+                <button class="cancelar">Cancelar Suscripción</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-contenido contenedor">
+            <p>©RacoonFlix 2024 Todos los derechos reservados</p>
+            <img class="logo" src="../assets/images/mapache7.png" alt="">
+        </div>
+    </footer>
+
+    <script src="../scripts/perfil.js"></script>
+</body>
+
+</html>

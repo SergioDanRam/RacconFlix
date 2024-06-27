@@ -1,0 +1,374 @@
+:root {
+  --background: #5db8ff;
+  --boton: #8da9c4;
+  --azul-oscuro: #040c3f;
+  --blanco: #fff;
+  --azul-gris: #747c91;
+  --azul: #052ce1;
+  --boton-cancelar: #ff8000;
+  --naranja-oscuro: #b86614;
+}
+
+body {
+  font-family: Nunito, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+  background-color: var(--background);
+  background: linear-gradient(180deg, #000000, #7c12df, #290847);
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  overflow: auto;
+}
+
+p,
+label {
+  color: var(--azul-oscuro);
+}
+
+p {
+  font-size: 19px;
+}
+
+h2 {
+  font-size: 35px;
+  color: var(--azul-oscuro);
+}
+
+.container {
+  margin: auto;
+  margin-top: 70px;
+  width: 70%;
+}
+
+.login-container {
+  margin: auto;
+  margin-top: 70px;
+  max-width: 1200px;
+  width: 95%;
+}
+
+.register-container {
+  margin: auto;
+  margin-top: 70px;
+  width: 70%;
+  padding: 20px;
+  background-color: var(--blanco);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-submit-container {
+  display: flex;
+  padding: 10px;
+  gap: 25px;
+}
+
+.form {
+  padding: 40px;
+  background-color: var(--blanco);
+}
+
+.register-submit-container .input {
+  width: 100%;
+}
+
+.form-img {
+  background-image: url('../assets/images/mapache7.png');
+  background-position: center center;
+  background-size: cover;
+  /* flex-grow(que el contenedor se haga mas grande) , 
+  flex-shrink(que el contenido se haga mas chico), 
+  flex-basis (que ocupe el 60%) */
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(60%);
+  height: 200px;
+  position: relative;
+  border-radius: 3px;
+}
+
+.form-img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* background: linear-gradient(
+    to right,
+    rgba(141, 169, 196, 0.5),
+    rgba(19, 64, 116, 0.5)
+  ); */
+}
+
+.form-register {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: calc(50%);
+  height: auto;
+  position: relative;
+  border-radius: 3px;
+}
+
+.form-link a {
+  color: var(--azul);
+}
+
+.center {
+  text-align: center;
+}
+
+.input label {
+  display: block;
+  font-size: 19px;
+  font-weight: bold;
+  margin: 20px 0;
+}
+
+.register-input {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.register-input input {
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  border: solid 1px #aaa;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.register-input label {
+  display: block;
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.form-link a {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 19px;
+}
+
+/* Hacia overflow el input en el formulario */
+.input input {
+  width: 345px;
+  padding: 10px 16px;
+  border: none;
+  border: solid 1px #aaa;
+  border-radius: 5px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.input .btn-login {
+  width: 90%;
+  background-color: #d4d4d4;
+  color: var(--blanco);
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  margin-top: 25px;
+  transition: background-color 0.3s ease-in-out;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.btn-login:hover {
+  background-color: var(--azul-oscuro);
+  background-color: rgb(0, 107, 39);
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.input .btn-enviar {
+  width: 345px;
+  background-color: #d4d4d4;
+  color: var(--blanco);
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  margin-top: 25px;
+  transition: background-color 0.3s ease-in-out;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#btnSubmit:enabled:hover {
+  background-color: rgb(0, 107, 39);
+  color: white;
+  cursor: pointer;
+}
+
+#btnSubmit:disabled {
+  background: #aaa;
+}
+
+.register {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.register .btn-enviar {
+  width: 40%;
+  background-color: #d4d4d4;
+  color: var(--blanco);
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  margin-top: 25px;
+  transition: background-color 0.3s ease-in-out;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.register .btn-cancelar {
+  width: 40%;
+  background-color: #d4d4d4;
+  color: var(--blanco);
+  color: black;
+  font-size: 22px;
+  font-weight: bold;
+  border: none;
+  margin-top: 25px;
+  transition: background-color 0.3s ease-in-out;
+  padding: 8px;
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.input .btn-cancelar {
+  display: block;
+  width: 330px;
+  text-decoration: none;
+  background-color: var(--boton-cancelar);
+  background-color: #d4d4d4;
+  color: var(--blanco);
+  color: black;
+  /* background-color: white;
+  color: black; */
+  font-size: 22px;
+  font-weight: bold;
+  margin-top: 15px;
+  transition: background-color 0.3s ease-in-out;
+  padding: 8px;
+  /* border: solid 1px #aaa; */
+  border: 1px solid black;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn-cancelar:hover {
+  /* background-color: var(--naranja-oscuro);
+  cursor: pointer; */
+  background-color: rgb(202, 2, 2);
+  color: white;
+}
+
+.form-pay {
+  height: auto;
+  padding: 0 20px;
+  font-size: 19px;
+  color: var(--azul-gris);
+}
+
+.form-pay fieldset {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.form-pay legend {
+  color: var(--azul-gris);
+  font-size: 19px;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.form-pay p {
+  font-size: 16px;
+  margin: 10px 30px;
+}
+
+.card-info {
+  margin: 10px 20px;
+}
+
+.form-pay label {
+  margin: 0 10px;
+}
+
+.card-info input {
+  padding: 4px;
+  border: none;
+  border: solid 1px #aaa;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+#card-cvv {
+  width: 20%;
+}
+
+@media (min-width: 768px) {
+  .form-container {
+    display: flex;
+  }
+  .form-img {
+    height: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .register-container {
+    padding: 40px;
+    align-items: stretch;
+  }
+  .register-container form {
+    display: flex;
+    height: 400px;
+    gap: 20px;
+  }
+  .register-submit-container {
+    display: flex;
+  }
+
+  .register-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .register-input label {
+    width: 25%;
+    text-align: right;
+    margin-left: 20px;
+  }
+
+  .register-input input {
+    width: 50%;
+  }
+
+  .bx {
+    transform: translate(-35px);
+    cursor: pointer;
+  }
+}

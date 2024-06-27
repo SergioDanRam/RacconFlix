@@ -1,0 +1,420 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Noto Serif", serif;
+}
+
+body{
+    font-family: "Bree Serif", serif;
+    background: linear-gradient(90deg, rgb(41, 8, 71) 0%, rgb(9, 0, 113) 100%);
+    background: linear-gradient(180deg, #000000, #7c12df, #290847);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+@media(min-height:932px){
+    body{
+        height: 100vh;
+    }
+    .footer{
+        position: absolute;
+        bottom: 0;
+    }
+
+    .perfil{
+        justify-content: center;
+    }
+}
+
+/* Globales */
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 30px;
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+
+/* Utilidades */
+
+.contenedor{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.text-align{
+    text-align: center;
+}
+
+
+/* ------------- Header -------------*/
+
+
+.iniciar-sesion{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.navegacion-contenido a{
+    margin: 0 20px;
+    position: relative;
+    transform: all .3s;
+}
+.navegacion-contenido a::after{
+    content: "";
+    position: absolute;
+    background-color: #e3a304;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: -10px;
+    transition: all .3s;
+}
+
+.navegacion-contenido a:hover::after{
+    width: 100%;
+}
+
+
+.contenedor-titulo{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+/* 
+.contenedor-titulo img{
+    filter: invert(100%);
+    height: 40px;
+    width: auto;
+} */
+
+.contenedor-titulo img{
+    height: 80px;
+    width: auto;
+}
+.login-perfil img{
+    filter: invert(100%);
+    height: 50px;
+}
+
+.logo{
+    /* filter: invert(0%); */
+    height: 70px;
+}
+
+
+.login-perfil{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+
+@media (min-width:768px){
+    .iniciar-sesion{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+@media (min-width:1330px){
+    .iniciar-sesion{
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+}
+
+/* ------------- Main -------------*/
+
+@media (min-width: 768px){
+    .perfil{
+        /* margin-top: 20px; */
+    }
+}
+
+.info-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+@media (min-width: 1024px){
+    .info-perfil{
+        flex-direction: row;
+        padding: 30px 0;
+    }
+}
+
+.foto-perfil{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: black;
+    margin: 40px 0;
+}
+
+@media(min-width:768px){
+    .foto-perfil{
+        margin: 0;
+    }
+}
+
+.foto-perfil img{
+    width: auto;
+    height: 100px;
+    border-radius: 50%;
+}
+.foto-perfil p{
+    margin-top: 10px;
+    font-size: 20px;
+}
+@media(min-width:769px){
+    .info-perfil{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+    .foto-perfil{
+        margin-top: 100px;
+        height: 100%;
+    }
+    .foto-perfil img{
+        height: 150px;
+    }
+}
+/*Formulario*/
+.formulario{
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    color: black;
+}
+
+.fieldset{
+    padding: 20px;
+    margin: 0 20px;
+    border: 2px solid black;
+}
+.fieldset legend{
+    margin: 15px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.fieldset > div{
+    margin: 10px 0;
+}
+
+.input{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.input-campo > input{
+    height: 30px;
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.input-campo{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-campo p{
+    display: none;
+}
+
+@media(min-width:769px){
+    .input-campo > input{
+        width: 500px;
+    }
+}
+
+.metodo-pago  input{
+    padding: 5px;
+}
+
+.metodo-pago > div{
+    margin: 10px 0;
+}
+
+.inputs-tarjeta{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.numeros-tarjeta{
+    width: 210px;
+}
+
+.codigo-tarjeta{
+    max-width: 100px;
+}
+
+
+
+.checkbox{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.cbu{
+    width: 100%;
+}
+
+.pago > div{
+    margin: 10px 0;
+}
+
+@media (min-width:769px){
+    .inputs-tarjeta-credito,
+    .transferencia-bancaria{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .numeros-tarjeta{
+        width: 390px;
+        margin-right: 10px;
+    }
+
+    .cbu{
+        width:500px;
+    }
+}
+/* @media(min-width:769px){
+    
+    .pago{
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .pago input[type="number"]{
+        right: 0;
+        position: absolute;
+        padding-left: 10px;
+        height: 30px;
+        width: 500px;
+    }
+} */
+
+
+.botones-formulario{
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    margin: 20px;
+}
+
+.botones-formulario button{
+    padding: 10px;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 13px;
+    font-weight: 600;
+    background-color: #d4d4d4;
+    transition: all .3s;
+}
+/* 
+.guardar:hover{
+    background-color: rgb(0, 107, 39);
+    color: white;
+} */
+
+.cancelar:hover{
+    background-color: rgb(202, 2, 2);
+    color: white;
+}
+
+@media (min-width:769px){
+    .botones-formulario{
+        grid-column: 2/4;
+        justify-content: center;
+    }
+    .botones-formulario button{
+        width: 220px;
+        font-size: 16px;
+    }
+}
+
+
+.tarjeta-credito {
+    display: flex;
+    align-items: center;
+}
+
+.tarjeta-credito input[type="number"] {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+/* ------------- Footer -------------*/
+
+.footer{
+    margin-top: 30px;
+    border-top: 2px solid white;
+    background: linear-gradient(270deg, rgb(41, 8, 71) 0%, rgba(17,12,76, 10));
+    width: 100%;
+}
+
+.footer-contenido{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 80px;
+}
+
+.footer p{
+    color: white;
+}
+
+.footer img{
+    width: auto;
+}
+@media (min-width: 768px){
+    .footer-contenido p{
+        font-size: 25px;   
+    }
+}
+
+/*-----------------Clases JS--------------------*/
+
+.contrasenaCampo{
+    display: flex;
+    flex-direction: column;
+}
+.error{
+    margin-top: 6px;
+}
+
+.correcto{
+    color: green;
+}
+
+@media(min-width:769px){
+    .tarjeta-error p{ 
+        margin-left: 310px;
+    }
+}

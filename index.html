@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap" rel="stylesheet">
+    <!-- Enlaza Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- Enlaza Material Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,600,1,200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/styles-principal.css">
+    <title>RacconFlix</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="fondo-header">
+            <div class="iniciar-sesion">
+                <div class="contenedor-titulo">
+                    <a href="index.html"><img class="logo" src="assets/images/mapache7.png" alt=""></a>
+                    <div class="login-perfil">
+                        <a href="pages/login.html"><img src="assets/images/logo-iniciar-sesion.svg" alt="#"></a>
+                        <a href="pages/perfil.html"><img src="assets/images/user-solid.svg" alt="#"></a>
+                    </div>
+                </div>
+                <div class="recomendacion">
+                    <p>Recomendacion</p>
+                    <div class="play">
+                        <a href="pages/pelicula.html"><img src="assets/images/play-solid.svg" alt="play"></a>
+                        <a href="pages/pelicula.html">
+                            <p>DeadPool 3</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <nav class="navegacion ">
+
+            <div class="navegacion-contenido contenedor">
+                <form class="formulario-categorias" action="#" method="get">
+
+                    <label for="categoria">Categorias: </label>
+                    <select name="categoria" id="categoria">
+                        <option value="#" disabled selected>Seleccione una categoria</option>
+                        <option value="todas" class="todas">Mostrar Todas</option>
+                        <option value="aventura">Aventura</option>
+                        <option value="catastrofe">Catástrofe</option>
+                        <option value="ciencia ficción">Ciencia Ficción</option>
+                        <option value="comedia">Comedia</option>
+                        <option value="drama">Drama</option>
+                        <option value="fantasia">Fantasia</option>
+                        <option value="infantil">Infantil</option>
+                        <option value="suspenso">Suspenso</option>
+                        <option value="terror">Terror</option>
+                    </select>
+
+                    <select name="tipo" id="tipo">
+                        <option value="#" disabled selected>Seleccione una tipo</option>
+                        <option value="todas">Mostrar Ambas</option>
+                        <option value="pelicula">Pelicula</option>
+                        <option value="serie">Serie</option>
+                    </select>
+
+                </form> <!-- formulario categoria -->
+
+                <form class="input-busqueda" action="#">
+                    <span class="material-symbols-outlined busqueda">search</span>
+                    <input type="text" placeholder="Ingrese pelicula o serie">
+                </form>
+            </div>
+        </nav>
+
+    </header>
+
+    <main class="contenido">
+        <div class="contenido-catalogo">
+
+            <section class="catalogo">
+                <h2>Destacadas</h2>
+                <div class="grid-catalogo">
+
+                </div>
+            </section>
+
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-contenido contenedor">
+            <p>©RacoonFlix 2024 Todos los derechos reservados</p>
+            <img class="logo" src="assets/images/mapache7.png" alt="">
+        </div>
+    </footer>
+
+    <script src="scripts/script.js"></script>
+</body>
+
+</html>
